@@ -32,4 +32,4 @@ Run the script with necessary options:
 ```bash
 ./zwe.sh -u <username> -p <password> [-sleep <interval>] [-n <notify_id>]
 ./zwe.sh -u 0602334567 -p password -sleep 1000 -n wete
-```# TEinternetmonitor
+```
