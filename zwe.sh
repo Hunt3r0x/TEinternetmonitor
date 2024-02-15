@@ -4,15 +4,15 @@ sleep=60
 username=""
 password=""
 
-if [ -n "$username" ]; then
-    echo "provide your username with flag -u"
-    exit 1
-fi
+# if [ -z "$username" ]; then
+#     echo "provide your username with flag -u"
+#     exit 1
+# fi
 
-if [ -n "$password" ]; then
-    echo "provide your password with flag -p"
-    exit 1
-fi
+# if [ -z "$password" ]; then
+#     echo "provide your password with flag -p"
+#     exit 1
+# fi
 
 scriptusage() {
     echo -e "\nEXAMPLE:"
@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
         ;;
     -u)
         username="$2"
-        if [ -n "$username" ]; then
+        if [ -z "$username" ]; then
             echo "Enter your username"
             exit 1
         fi
@@ -36,7 +36,7 @@ while [[ $# -gt 0 ]]; do
         ;;
     -p)
         password="$2"
-        if [ -n "$password" ]; then
+        if [ -z "$password" ]; then
             echo "Enter your password"
             exit 1
         fi
