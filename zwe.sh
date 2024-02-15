@@ -4,16 +4,6 @@ sleep=60
 username=""
 password=""
 
-# if [ -z "$username" ]; then
-#     echo "provide your username with flag -u"
-#     exit 1
-# fi
-
-# if [ -z "$password" ]; then
-#     echo "provide your password with flag -p"
-#     exit 1
-# fi
-
 scriptusage() {
     echo -e "\nEXAMPLE:"
     echo -e "zwe.sh -u 0602334567 -p password"
@@ -29,7 +19,7 @@ while [[ $# -gt 0 ]]; do
     -u)
         username="$2"
         if [ -z "$username" ]; then
-            echo "Enter your username"
+            echo "provide your username"
             exit 1
         fi
         shift
@@ -37,7 +27,7 @@ while [[ $# -gt 0 ]]; do
     -p)
         password="$2"
         if [ -z "$password" ]; then
-            echo "Enter your password"
+            echo "provide your password"
             exit 1
         fi
         shift
@@ -54,6 +44,12 @@ while [[ $# -gt 0 ]]; do
     esac
     shift
 done
+
+if [ -z "$username" ] || [ -z "$password" ]; then
+    echo "username and password are required."
+    scriptusage
+    exit 1
+fi
 
 GetJwt() {
     local TOKENURL="https://api-my.te.eg/api/user/generatetoken?channelId=WEB_APP"
