@@ -4,6 +4,22 @@ sleep=60
 username=""
 password=""
 
+if [ -n "$username" ]; then
+    echo "provide your username with flag -u"
+    exit 1
+fi
+
+if [ -n "$password" ]; then
+    echo "provide your password with flag -p"
+    exit 1
+fi
+
+scriptusage() {
+    echo -e "\nEXAMPLE:"
+    echo -e "zwe.sh -u 0602334567 -p password"
+    echo -e "zwe.sh -u 0602334567 -p password -sleep 1000 -n notify-id"
+}
+
 while [[ $# -gt 0 ]]; do
     case "$1" in
     -sleep)
@@ -12,10 +28,18 @@ while [[ $# -gt 0 ]]; do
         ;;
     -u)
         username="$2"
+        if [ -n "$username" ]; then
+            echo "Enter your username"
+            exit 1
+        fi
         shift
         ;;
     -p)
         password="$2"
+        if [ -n "$password" ]; then
+            echo "Enter your password"
+            exit 1
+        fi
         shift
         ;;
     -n)
@@ -24,6 +48,7 @@ while [[ $# -gt 0 ]]; do
         ;;
     *)
         echo "Invalid option: $1" 1>&2
+        scriptusage
         exit 1
         ;;
     esac
