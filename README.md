@@ -5,8 +5,8 @@ This script monitors internet usage for TE (Telecom Egypt) ISP users, providing 
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/te-internet-monitor.git
-cd te-internet-monitor
+git clone https://github.com/yourusername/TEinternetmonitor.git
+cd TEinternetmonitor
 chmod +x zwe.sh
 ./zwe.sh -u YOUR_USERNAME -p YOUR_PASSWORD
 ```
