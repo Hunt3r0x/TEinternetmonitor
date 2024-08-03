@@ -3,7 +3,7 @@
 This script monitors internet usage for TE (Telecom Egypt) ISP users, providing updates on usage percentage and remaining data allowance.
 
 ## Quick Start
-### bash script zwe.sh is old version
+### bash script zwe.sh is old version use the py version
 ```bash
 git clone https://github.com/yourusername/TEinternetmonitor.git
 cd TEinternetmonitor
@@ -32,4 +32,8 @@ Run the script with necessary options:
 ```bash
 ./zwe.sh -u <username> -p <password> [-sleep <interval>] [-n <notify_id>]
 ./zwe.sh -u 0602334567 -p password -sleep 1000 -n wete
+```
+
+```bash
+python3 ./zwe.py --acctId <username> --password <password>
 ```
