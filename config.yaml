@@ -1,0 +1,13 @@
+login_url: "https://my.te.eg/echannel/service/besapp/base/rest/busiservice/v1/auth/userAuthenticate"
+query_url: "https://my.te.eg/echannel/service/besapp/base/rest/busiservice/cz/cbs/bb/queryFreeUnit"
+headers:
+  User-Agent: "Mozilla/5.0"
+  Content-Type: "application/json"
+  Csrftoken: ""
+  Isselfcare: "true"
+  Channelid: "702"
+rate_limit: 1
+metrics_port: 8000
+health_check_interval: 300
+retry_attempts: 3
+retry_delay: 5 

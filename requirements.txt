@@ -1,0 +1,5 @@
+aiohttp>=3.8.0
+python-dotenv>=0.19.0
+PyYAML>=6.0
+prometheus-client>=0.14.0
+ratelimit>=2.2.1 
